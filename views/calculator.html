@@ -1,0 +1,103 @@
+<h2>Calculator</h2>
+
+<div class="container cf">
+    <div>
+        <p>Copyright (C) 2015 Jozef Butko<br>
+        <a href="http://www.jozefbutko.com/resume">www.jozefbutko.com/resume</a><br>
+        <a href="http://www.github.com/jbutko">www.github.com/jbutko</a><br>
+        <a href="http://www.twitter.com/jozefbutko">@jozefbutko</a></p>
+    </div>
+</div>
+<div class="container">
+	<div class="form-wraper">
+
+		<label>Город для доставки</label>
+		<select ng-model="city">
+			<option value="Запорожье" ng-selected="city=='Запорожье'">Запорожье</option>
+			<option value="Днепр" ng-selected="city=='Днепр'">Днепр</option>
+			<option value="Одесса" ng-selected="city=='Одесса'">Одесса</option>
+			<option value="Киев" ng-selected="city=='Киев'">Киев</option>
+			<option value="Львов" ng-selected="city=='Львов'">Львов</option>
+			<option value="Харьков" ng-selected="city=='Харьков'">Харьков</option>
+		</select>
+
+		<label>Чем доставлять?</label>
+		<div class="toogle-wrap">
+			<label>
+				<input type="radio" ng-model="delivery" value="plane">
+				Самолет
+			</label>
+			<label>
+				<input type="radio" ng-model="delivery" value="car">
+				Машина
+			</label>
+			<label>
+				<input type="radio" ng-model="delivery" value="bicycle">
+				Велосипед
+			</label>
+		</div>
+
+		<div class="toogle-wrap">
+			<label>Курьеру на кофе?</label>
+			<div class="toogle-input">
+				<label class="switch">
+					<input type="checkbox" ng-model="giveMoney"
+							ng-true-value="'iGiveMoney'" ng-false-value="'noMoney'">
+					<span class="toogle-slider round"></span>
+				</label>
+			</div>
+		</div>
+
+		<div class="toogle-wrap">
+			<label>Выбрать пиццу из списка или собрать пиццу самому?</label>
+			<div class="toogle-input">
+				<label>Выбрать</label>
+				<label class="switch">
+					<input type="checkbox" ng-model="choosePizza"
+							ng-true-value="'choosePizza'" ng-false-value="'makePizza'">
+					<span class="toogle-slider"></span>
+				</label>
+				<label>Cобрать</label>
+			</div>
+		</div>
+		
+		<label>Выбрать пиццу из списка</label>
+		<select ng-model="pizzaList">
+			<option value="АМЕРИКАНО" ng-selected="city=='АМЕРИКАНО'">АМЕРИКАНО</option>
+			<option value="4 СЫРА" ng-selected="city=='4 СЫРА'">4 СЫРА</option>
+			<option value="ЦЕЗАРЕ" ng-selected="city=='ЦЕЗАРЕ'">ЦЕЗАРЕ</option>
+			<option value="МЕКСИКАНСКАЯ" ng-selected="city=='МЕКСИКАНСКАЯ'">МЕКСИКАНСКАЯ</option>
+			<option value="ГАВАЙСКАЯ" ng-selected="city=='ГАВАЙСКАЯ'">ГАВАЙСКАЯ</option>
+			<option value="КАПРИЧИОЗА" ng-selected="city=='КАПРИЧИОЗА'">КАПРИЧИОЗА</option>
+		</select>
+		
+		<div class="chips-wrap">
+			<div class="chip">
+				томатный соус
+				<span class="closebtn" onclick="this.parentElement.style.display='none'">X</span>
+			</div>
+			<div class="chip">
+				шампиньоны
+				<span class="closebtn" onclick="this.parentElement.style.display='none'">X</span>
+			</div>
+			<div class="chip">
+				маслины
+				<span class="closebtn" onclick="this.parentElement.style.display='none'">X</span>
+			</div>
+			<div class="chip">
+				помидор
+				<span class="closebtn" onclick="this.parentElement.style.display='none'">X</span>
+			</div>
+			<div class="chip">
+				петрушка
+				<span class="closebtn" onclick="this.parentElement.style.display='none'">X</span>
+			</div>
+			<div class="chip">
+				курица
+				<span class="closebtn" onclick="this.parentElement.style.display='none'">X</span>
+			</div>
+
+		</div>
+
+	</div>
+</div>
