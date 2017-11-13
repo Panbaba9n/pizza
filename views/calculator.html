@@ -1,18 +1,11 @@
 <h2>Calculator</h2>
 
-<div class="container cf">
-    <div>
-        <p>Copyright (C) 2015 Jozef Butko<br>
-        <a href="http://www.jozefbutko.com/resume">www.jozefbutko.com/resume</a><br>
-        <a href="http://www.github.com/jbutko">www.github.com/jbutko</a><br>
-        <a href="http://www.twitter.com/jozefbutko">@jozefbutko</a></p>
-    </div>
-</div>
 <div class="container">
 	<div class="form-wraper">
-
+		<form name="myForm" action="#">
 		<label>Город для доставки</label>
-		<select ng-model="city">
+		<select ng-model="city" required>
+			<option value="" ng-selected="city==''"></option>
 			<option value="Запорожье" ng-selected="city=='Запорожье'">Запорожье</option>
 			<option value="Днепр" ng-selected="city=='Днепр'">Днепр</option>
 			<option value="Одесса" ng-selected="city=='Одесса'">Одесса</option>
@@ -24,15 +17,15 @@
 		<label>Чем доставлять?</label>
 		<div class="toogle-wrap">
 			<label>
-				<input type="radio" ng-model="delivery" value="plane">
+				<input type="radio" ng-model="delivery" value="plane" required>
 				Самолет
 			</label>
 			<label>
-				<input type="radio" ng-model="delivery" value="car">
+				<input type="radio" ng-model="delivery" value="car" required>
 				Машина
 			</label>
 			<label>
-				<input type="radio" ng-model="delivery" value="bicycle">
+				<input type="radio" ng-model="delivery" value="bicycle" required>
 				Велосипед
 			</label>
 		</div>
@@ -53,16 +46,17 @@
 			<div class="toogle-input">
 				<label>Выбрать</label>
 				<label class="switch">
-					<input type="checkbox" ng-model="choosePizza"
-							ng-true-value="'choosePizza'" ng-false-value="'makePizza'">
+				<!-- ng-true-value="$calculator.choseOrMake()" ng-false-value="'makePizza'" -->
+					<input type="checkbox" ng-model="$calculator.choosePizza">
 					<span class="toogle-slider"></span>
 				</label>
 				<label>Cобрать</label>
 			</div>
 		</div>
 		
-		<label>Выбрать пиццу из списка</label>
-		<select ng-model="pizzaList">
+		<label ng-hide="$calculator.choosePizza">Выбрать пиццу из списка</label>
+		<select ng-model="pizzaList" ng-required="!$calculator.choosePizza">
+			<option value="" ng-selected="city==''"></option>
 			<option value="АМЕРИКАНО" ng-selected="city=='АМЕРИКАНО'">АМЕРИКАНО</option>
 			<option value="4 СЫРА" ng-selected="city=='4 СЫРА'">4 СЫРА</option>
 			<option value="ЦЕЗАРЕ" ng-selected="city=='ЦЕЗАРЕ'">ЦЕЗАРЕ</option>
@@ -98,6 +92,6 @@
 			</div>
 
 		</div>
-
+		</form>
 	</div>
 </div>

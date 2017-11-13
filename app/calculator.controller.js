@@ -19,6 +19,11 @@
     // 'controller as' syntax
     var self = this;
 
+    self.choosePizza = false;
+    self.choseOrMake = function () {
+      self.choosePizza = !self.choosePizza;
+    };
+
 
     ////////////  function definitions
 
