@@ -18,6 +18,7 @@
   angular
     .module('pizza', [
       'ngRoute',
+      'ngMaterial',
       'calculator'
     ])
     .config(config);

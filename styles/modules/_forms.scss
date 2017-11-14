@@ -205,7 +205,7 @@ select {
     color: $black;
   }
 }
-.ng-dirty.ng-invalid {
+form.ng-dirty.ng-invalid {
   background: red;
 }
 .ng-hide {

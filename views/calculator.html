@@ -46,7 +46,6 @@
 			<div class="toogle-input">
 				<label>Выбрать</label>
 				<label class="switch">
-				<!-- ng-true-value="$calculator.choseOrMake()" ng-false-value="'makePizza'" -->
 					<input type="checkbox" ng-model="$calculator.choosePizza">
 					<span class="toogle-slider"></span>
 				</label>
@@ -64,6 +63,9 @@
 			<option value="ГАВАЙСКАЯ" ng-selected="city=='ГАВАЙСКАЯ'">ГАВАЙСКАЯ</option>
 			<option value="КАПРИЧИОЗА" ng-selected="city=='КАПРИЧИОЗА'">КАПРИЧИОЗА</option>
 		</select>
+
+		<md-chips name="fruits" ng-model="myItems" placeholder="Add an item" md-max-chips="5">
+  </md-chips>
 		
 		<div class="chips-wrap">
 			<div class="chip">

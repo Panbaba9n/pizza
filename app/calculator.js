@@ -17,7 +17,10 @@
    */
   angular
     .module('calculator', [
-      'ngRoute'
+      'ngRoute',
+      'ngMaterial',
+      'ngMessages',
+      'material.svgAssetsCache'
     ])
     .config(config);
 
